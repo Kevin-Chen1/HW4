@@ -11,9 +11,9 @@
       
 <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "Qa._@ZR@QtoU";
-$dbname = "projecto_homework3";
+$username = "kevinche_User1";
+$password = "I<3oklahoma";
+$dbname = "kevinche_HW3DB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
