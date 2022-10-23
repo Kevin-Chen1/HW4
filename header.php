@@ -40,7 +40,7 @@
           <a class="nav-link" href="instructor-edit-save.php">edit saved instructor</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="instructor-delete-save.php">edit instructor</a>
+          <a class="nav-link" href="instructor-delete-save.php">saved deleted instructor</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="instructor-section.php">instructor section</a>
