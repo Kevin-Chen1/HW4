@@ -20,12 +20,12 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$iName = $_POST['iName'];
+$sName = $_POST['sName'];
 
 $sql = "update section set section_name=? where section_id=?";
 //echo $sql;
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", $iName, $_POST['iid']);
+    $stmt->bind_param("si", $sName, $_POST['sid']);
     $stmt->execute();
 ?>
     
