@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <tbody>
           
 <?php
-$sql = "SELECT instructor_id, instructor_name from instructor";
+$sql = "SELECT student_id, student_name from student";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
