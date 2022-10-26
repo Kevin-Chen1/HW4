@@ -27,27 +27,6 @@
         <li class="nav-item">
           <a class="nav-link" href="student.php">Students</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="instructor-add.php">add instructor</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="instructor-add-save.php">save added instructor</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="instructor-edit.php">edit instructor</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="instructor-edit-save.php">edit saved instructor</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="instructor-delete-save.php">saved deleted instructor</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="instructor-section.php">instructor section</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="section-edit.php">edit section</a>
-        </li>
       </ul>
     </div>
   </div>
