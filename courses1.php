@@ -115,7 +115,8 @@ if ($searchResult !== false && $searchResult->num_rows > 0)
           
 <?php
   }
-} 
+ else {
+  echo "0 results";
 }
 $conn->close();
 ?>
