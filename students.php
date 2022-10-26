@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Instructors</title>
+    <title>student</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
@@ -90,7 +90,7 @@ if ($result->num_rows > 0) {
                           <input type="text" class="form-control" id="editStudent<?=$row["student_id"]?>Name" aria-describedby="editStudent<?=$row["student_id"]?>Help" name="stName" value="<?=$row['student_name']?>">
                           <div id="editStudent<?=$row["student_id"]?>Help" class="form-text">Enter the student's name.</div>
                         </div>
-                        <input type="hidden" name="iid" value="<?=$row['student_id']?>">
+                        <input type="hidden" name="stid" value="<?=$row['student_id']?>">
                         <input type="hidden" name="saveType" value="Edit">
                         <input type="submit" class="btn btn-primary" value="Submit">
                       </form>
@@ -101,7 +101,7 @@ if ($result->num_rows > 0) {
             </td>
             <td>
               <form method="post" action="">
-                <input type="hidden" name="iid" value="<?=$row["student_id"]?>" />
+                <input type="hidden" name="stid" value="<?=$row["student_id"]?>" />
                 <input type="hidden" name="saveType" value="Delete">
                 <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
               </form>
