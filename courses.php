@@ -36,14 +36,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     case 'Add':
       $sqlAdd = "insert into course (prefix, number, description) value (?,?,?)";
       $stmtAdd = $conn->prepare($sqlAdd);
-      $stmtAdd->bind_param("cici", $_POST['cpf'], $_POST['cnb'], $_POST['cdscr']);
+      $stmtAdd->bind_param("sis", $_POST['cpf'], $_POST['cnb'], $_POST['cdscr']);
       $stmtAdd->execute();
       echo '<div class="alert alert-success" role="alert">New course.</div>';
       break;
     case 'Edit':
       $sqlEdit = "update course set prefix=?, number=?, description=? where course_id=?";
       $stmtEdit = $conn->prepare($sqlEdit);
-      $stmtEdit->bind_param("cicii", $_POST['cpf'], $_POST['cnb'], $_POST['cdscr'], $_POST['cid']);
+      $stmtEdit->bind_param("sisi", $_POST['cpf'], $_POST['cnb'], $_POST['cdscr'], $_POST['cid']);
       $stmtEdit->execute();
       echo '<div class="alert alert-success" role="alert">Course edited.</div>';
       break;
