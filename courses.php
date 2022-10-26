@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo '<div class="alert alert-success" role="alert">New course.</div>';
       break;
     case 'Edit':
-      $sqlEdit = "update course set prefix=?, number=?, description=?, where course_id=?";
+      $sqlEdit = "update course set prefix=?, number=?, description=? where course_id=?";
       $stmtEdit = $conn->prepare($sqlEdit);
       $stmtEdit->bind_param("cicii", $_POST['cpf'], $_POST['cnb'], $_POST['cdscr'], $_POST['cid']);
       $stmtEdit->execute();
