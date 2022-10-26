@@ -36,12 +36,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $stmtEdit->bind_param("si", $_POST['iName'], $_POST['iid']);
       $stmtEdit->execute();
       echo '<div class="alert alert-success" role="alert">Instructor edited.</div>';
+      break;
     case 'Delete':
       $sqlDelete = "delete from instructor where instructor_id=?";
       $stmtDelete = $conn->prepare($sqlDelete);
       $stmtDelete->bind_param("i", $_POST['iid']);
       $stmtDelete->execute();
       echo '<div class="alert alert-success" role="alert">Instructor deleted.</div>';
+      break;
   }
 }
 ?>
@@ -90,7 +92,7 @@ if ($result->num_rows > 0) {
                         </div>
                         <input type="hidden" name="iid" value="<?=$row['instructor_id']?>">
                         <input type="hidden" name="saveType" value="Edit">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <input type="submit" class="btn btn-primary" value="Submit">
                       </form>
                     </div>
                   </div>
@@ -101,7 +103,7 @@ if ($result->num_rows > 0) {
               <form method="post" action="">
                 <input type="hidden" name="iid" value="<?=$row["instructor_id"]?>" />
                 <input type="hidden" name="saveType" value="Delete">
-                <button type="submit" class="btn" onclick="return confirm('Are you sure?')">Delete</button>
+                <input type="submit" class="btn" onclick="return confirm('Are you sure?')" value="Delete">
               </form>
             </td>
           </tr>
