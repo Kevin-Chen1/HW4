@@ -58,10 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>         
 <?php
-$sql = "SELECT course_id, prefix, number, description, FROM course";
+$sql = "SELECT course_id, prefix, number, description FROM course";
 $result = $conn->query($sql);
 
-if ($searchResult !== false && $searchResult->num_rows > 0)
+if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 ?>
